@@ -5,7 +5,6 @@ import Link from './Link';
 const useStyles = makeStyles({
   card: {
     display: 'flex',
-    
   },
   cardDetails: {
     flex: 1,
@@ -20,11 +19,11 @@ function PostCard({ body, date, summary, title, slug }) {
     return (
 
 
-<Grid item  sm={12}>
+<Grid item  xs={12}>
         
 <Card className={classes.card}>
-  <div className={classes.cardDetails}>
-    <CardContent>
+  
+    <CardContent  className={classes.cardDetails} >
     <Link href="/blog/[pid]" as={`/blog/${slug}`}>
       <Typography component="h2" variant="h5">
         {title}
@@ -38,7 +37,7 @@ function PostCard({ body, date, summary, title, slug }) {
         {date}
       </Typography>
     </CardContent>
-  </div>
+  
 </Card>
 
 </Grid>
