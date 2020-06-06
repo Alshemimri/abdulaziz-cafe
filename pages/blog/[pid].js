@@ -26,7 +26,7 @@ const Post = ({ post }) => {
       </Head>
       <Layout>
         <Box py={5}>
-          <Typography variant="h4" component="h1" align="center" gutterBottom>
+          <Typography variant="h4" component="h1" align="center" style={{ paddingTop: 30 ,paddingBottom: 50, color: '#0d47a1'}}>
             {post.title}
           </Typography>
           {documentToReactComponents(post.body)}

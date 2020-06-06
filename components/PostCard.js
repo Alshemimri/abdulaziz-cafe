@@ -9,7 +9,7 @@ import Link from "./Link";
 
 const useStyles = makeStyles({
   a: {
-    textDecoration: "none",
+    color: "#0d47a1"
   },
 });
 
@@ -19,7 +19,7 @@ function PostCard({ date, summary, title, slug }) {
     <Grid item xs={12}>
       <Card >
         <CardContent >
-          <Link href="/blog/[pid]" as={`/blog/${slug}`}>
+          <Link href="/blog/[pid]" as={`/blog/${slug}`} className={classes.a} underline='none'>
             <Typography component="h2" variant="h5">
               {title}
             </Typography>
