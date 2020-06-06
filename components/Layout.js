@@ -1,27 +1,15 @@
-import React from 'react'
-import { Container } from "@material-ui/core"
+// Components
 import Header from "./Header"
-import CssBaseline from '@material-ui/core/CssBaseline';
-
-
+// Material UI
+import Container  from "@material-ui/core/Container"
 
 const Layout = ({children, home}) => {
-    
-
-
-
     return (
-       
-        <Container maxWidth="md" style={{direction: 'rtl'}}>
-            
+        <Container maxWidth="md" style={{direction: 'rtl', paddingTop: 5, paddingBottom: 5}} >
             <Header home={home} />
             {children}
-            {/* <Footer /> */}
-           
-        </Container>
-     
+        </Container> 
     )
 }
-
 
 export default Layout
