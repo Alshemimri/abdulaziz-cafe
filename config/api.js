@@ -4,13 +4,14 @@ const client = require("contentful").createClient({
 });
 
 const fetchEntries = async () => {
-  const entries = await client.getEntries();
+  const entries = await client.getEntries({ order:'sys.createdAt' });
   if (entries.items) return entries.items;
   console.log(`Error getting Entries for ${contentType.name}.`);
 };
 
 export const getPosts = async () => {
   let posts = await fetchEntries();
+  posts.reverse();
   return posts;
 };
 
