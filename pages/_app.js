@@ -5,6 +5,9 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 // import theme from '../src/theme';
 import theme from "../components/theme";
+// Google Analytics
+import * as gtag from '../lib/gtag'
+
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -16,6 +19,16 @@ export default function MyApp(props) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
+
+  React.useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url)
+    }
+    Router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      Router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [])
 
   return (
     <React.Fragment>
