@@ -56,7 +56,7 @@ const Header = ({ home }) => {
               <LocalCafeTwoToneIcon style={{ fontSize: 50 }} />
             </Box>
             <Typography variant="subtitle1" align="center">
-              مدونة شخصية تهتم بريادة الأعمال، تطوير وإدارة المنتجات التقنية،
+              مدونة شخصية تهتم بريادة الأعمال---، تطوير وإدارة المنتجات التقنية،
               وهندسة البرمجيات.
             </Typography>
           </Box>
